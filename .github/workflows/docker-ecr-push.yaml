@@ -6,7 +6,7 @@ on:
       - main  # Change this to your default branch if it's not 'main'
 
 env:
-  ECR_REPOSITORY: my-ecr-repo  # Define the variable here
+  ECR_REPOSITORY: uc-03/healthcare-app  # Define the variable here
 
 jobs:
   build-and-push:
