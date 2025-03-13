@@ -7,7 +7,7 @@ on:
 
 env:
   ECR_REPOSITORY: uc-03-healthcare-app  # Define the variable here
-  # ECR_REG: "${AWS_ACCOUNT_ID}.dkr.ecr.eu-west-2.amazonaws.com"
+
 
 jobs:
   build-and-push:
