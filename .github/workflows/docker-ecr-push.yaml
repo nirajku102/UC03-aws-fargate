@@ -7,6 +7,7 @@ on:
 
 env:
   ECR_REPOSITORY: uc-03-healthcare-app  # Define the variable here
+  # ECR_REG: "${AWS_ACCOUNT_ID}.dkr.ecr.eu-west-2.amazonaws.com"
 
 jobs:
   build-and-push:
@@ -35,5 +36,5 @@ jobs:
 
     - name: Build and Push Patient Service Docker Image
       run: |
-        docker build -t ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ env.ECR_REPOSITORY }}/patient-service:latest ./docker/patient-service
+        docker build -t ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ env.ECR_REPOSITORY }}/appointment-service:latest ./docker/patient-service
         docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ env.ECR_REPOSITORY }}/patient-service:latest
